@@ -1,0 +1,13 @@
+
+def get_average_grade(grades_dict):
+    average_dict = {}
+
+    for student, grades in grades_dict.items():
+        # Calculate average if there are grades
+        if grades:
+            avg = round(sum(grades) / len(grades), 1)
+        else:
+            avg = 0.0  # If no grades are present, default to 0.0
+        average_dict[student] = avg
+
+    return average_dict
